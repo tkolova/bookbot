@@ -18,8 +18,7 @@ def print_book(contents):
 
 def count_words(contents):
     words = contents.split()
-    print(f"The book has {len(words)} words")
-    print("\n" + "=========" + "\n")
+    print(f"The file has {len(words)} words." + "\n")
 
 def count_letters(contents):
     cont_lowercase = contents.lower()
@@ -30,8 +29,11 @@ def count_letters(contents):
     for letter in cont_lowercase:
         if letter in count_dict:
             count_dict[letter] += 1
+    sorted_counts = dict(sorted(count_dict.items(), key=lambda x:x[1], reverse=True))
     print("The letter counts are:" + "\n")
-    print(count_dict)
+    #print(sorted_counts)
+    for letter in sorted_counts:
+        print(f"{letter} : {sorted_counts[letter]}")
     print("\n" + "=========" + "\n")   
 
 main()
