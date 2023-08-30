@@ -18,5 +18,7 @@ def count_words(contents):
     words = contents.split()
     print(f"The book has {len(words)} words")
     print()
+    print("=========")
+    print()
 
 main()
