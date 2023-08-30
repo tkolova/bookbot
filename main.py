@@ -14,15 +14,12 @@ def read_book(book_path):
 
 def print_book(contents):
     print(contents)
-    print("=========")
-    print()
+    print("=========" + "\n")
 
 def count_words(contents):
     words = contents.split()
     print(f"The book has {len(words)} words")
-    print()
-    print("=========")
-    print()
+    print("\n" + "=========" + "\n")
 
 def count_letters(contents):
     cont_lowercase = contents.lower()
@@ -35,9 +32,6 @@ def count_letters(contents):
             count_dict[letter] += 1
     print("The letter counts are:" + "\n")
     print(count_dict)
-    print()
-    print("=========")
-    print()
-        
+    print("\n" + "=========" + "\n")   
 
 main()
