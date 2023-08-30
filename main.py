@@ -1,6 +1,8 @@
 def main():
     book_path = "books/frankenstein.txt"
-    print_book(read_book(book_path))
+    contents = read_book(book_path)
+    print_book(contents)
+    count_words(contents)
 
 def read_book(book_path):
     with open(book_path) as f:
@@ -9,5 +11,12 @@ def read_book(book_path):
 
 def print_book(contents):
     print(contents)
+    print("=========")
+    print()
+
+def count_words(contents):
+    words = contents.split()
+    print(f"The book has {len(words)} words")
+    print()
 
 main()
