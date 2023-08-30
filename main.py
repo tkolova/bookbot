@@ -31,7 +31,6 @@ def count_letters(contents):
             count_dict[letter] += 1
     sorted_counts = dict(sorted(count_dict.items(), key=lambda x:x[1], reverse=True))
     print("The letter counts are:" + "\n")
-    #print(sorted_counts)
     for letter in sorted_counts:
         print(f"{letter} : {sorted_counts[letter]}")
     print("\n" + "=========" + "\n")   
